@@ -20,7 +20,5 @@
     "@babel/eslint-parser": "7.22.5",
     "babel-loader": "^8.2.2"
   },
-  "scripts": {
-    "start": "node Server.js"
-  }
+  
 }
