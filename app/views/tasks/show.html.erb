@@ -1,0 +1,39 @@
+<br>
+<table>
+  <tr>
+    <th>Name:</th>
+    <th>Description:</th>
+    <th>Category:</th>
+    <th>Due Date:</th>
+    <th>Completed:</th>
+  </tr>
+  <tr>
+    <td><%= @task.name %></td>
+    <td><%= @task.description %></td>
+    <td><%= @task.category %></td>
+    <td><%= @task.duedate %></td>
+    <td><%= check_box_tag "task_completed", 1, @task.completed, disabled: true %></td>
+  </tr>
+</table>
+
+<div class="centered-buttons">
+<%= link_to 'Edit this task', edit_task_path(@task) %> |
+<%= link_to 'Back to tasks', tasks_path %>
+
+<%= button_to 'Delete Task', task_path(@task), method: :delete, class: 'custom-button2', id: 'delete-task-button' %>
+
+
+</div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    const deleteButton = document.getElementById("delete-task-button");
+    deleteButton.addEventListener("click", function(event) {
+      if (!confirm('Are you sure you want to delete this task?')) {
+        event.preventDefault(); // Prevent the default delete action if the user cancels.
+      }
+    });
+  });
+</script>
+
+

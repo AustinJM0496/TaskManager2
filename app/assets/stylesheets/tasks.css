@@ -1,0 +1,549 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the body and background */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF;
+  padding: 70px;
+}
+
+/* Style the header */
+.header {
+  position: fixed;
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Center the header contents */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+/* Style the main container */
+.container {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form */
+.form-container {
+  background-color: #f6f8fa;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-show-element {
+  margin-bottom: 20px;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ 
+}
+
+table, td {
+  border: 1px solid #dcdcdc !important;
+}
+
+th, td {
+  padding: 25px !important;
+  text-align: center;
+}
+
+
+/* Style the buttons */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style the task status */
+.status {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Style the footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Style error messages in red */
+div#error-messages {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Style the error message header */
+div#error-messages h2 {
+  font-weight: bold;
+}
+
+/* Style the error list */
+div#error-messages ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style each error message */
+div#error-messages ul li {
+  color: red;
+  margin-left: 20px;
+}
+
+/* Style form labels */
+div.form-group label {
+  font-weight: bold;
+  display: block;
+  color: #333; /* Dark text color */
+}
+
+/* Style text fields and text areas */
+div.form-group input[type="text"],
+div.form-group textarea,
+div.form-group select,
+div.form-group input[type="date"],
+div.form-group input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333; /* Dark text color */
+  text-align: center; /* Center text horizontally */
+  display: block; /* Make it a block element to center horizontally */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Style the date field */
+div.form-group input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto; /* Center horizontally */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333; /* Dark text color */
+  position: fixed;
+}
+
+/* Style the completed checkbox */
+div.form-group input[type="checkbox"] {
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Style the submit button */
+div.form-group input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: block; /* Make the submit button a block element for centering */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Style the submit button on hover */
+div.form-group input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.status {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Style the completed task (with line-through) */
+.completed-task {
+  background-color: #c6ced5 !important; 
+  font-style: italic;
+  color: #666; 
+  position: relative; 
+}
+
+.completed-task::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #000000; 
+  position: absolute;
+  top: 50%; 
+  left: 0; 
+  width: 100%; 
+  transform: translateY(-1px); 
+}
+
+
+.personal {
+  background-color: #A3BAA7;
+}
+
+.work {
+  background-color: #FFFFED;
+}
+
+/* Index File CSS */
+
+thead {
+  text-align: center;
+}
+
+thead th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #003554; /* Header background color */
+  color: #FFFFFF; /* Header text color */
+  font-weight: bold !important; /* Header text font weight */
+  padding: 25px !important; /* Header cell padding */
+}
+
+
+.flash-notice {
+  text-align: center;
+}
+
+/* Style the filter label */
+
+.dataTables_filter  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center the text within the div */
+  
+}
+
+.dataTables_filter label {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Style the text input elements */
+.dataTables_filter input[type="text"] {
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the select dropdown elements */
+.dataTables_filter select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px;
+}
+
+
+
+#increase-font-size, #decrease-font-size {
+  background-color: #414385;
+  color: white;
+  padding: 10px 20px;
+  border-radius:15px;
+  border: none;
+  cursor: pointer;
+}
+
+#increase-font-size:hover, #decrease-font-size:hover {
+  background-color: #38396a;
+}
+
+
+
+/* New Tasks CSS */
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* This ensures the content is centered in the viewport. */
+}
+
+.form-container {
+  margin: 20px 0; /* Adjust the margin as needed */
+  background: hsl(218deg 50% 91%);
+  padding: 5em;
+  width:20%;
+  border-radius:15px;
+  padding-right: 100px;
+
+}
+
+/* Apply styles to all text input fields */
+.form-container input[type="text"] {
+  width: 108%;
+  height: 40px; /* You can adjust the height as needed */
+  border-radius:15px;
+  border-color: black !important;
+  margin-top: 10px;
+  
+}
+
+
+textarea {
+  width:100%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:120px;
+  border-color: black !important;
+  border: 5px;
+  margin-top: 10px;
+}
+
+/* Custom styles for the category label and select input */
+form label[for="task_category"], form select#task_category {
+  width: 100%;
+  padding: 5px;
+}
+
+/* Custom styles for the due date label and date input */
+form label[for="task_duedate"], form input#task_duedate {
+  width: 95%;
+  padding: 5px;
+}
+
+.back-link {
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+
+
+
+/* Show Tasks CSS */
+
+.centered-content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center; /* Center text horizontally if needed */
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content next to the header */
+  text-align: left; /* Adjust text alignment as needed */
+}
+
+/* Show Buttons CSS */
+
+.centered-buttons {
+  text-align: center;
+  margin-top: 20px; /* You can adjust the margin as needed */
+}
+
+.centered-button {
+  margin: 5px; /* You can adjust the margin as needed */
+}
+
+/* CSS Submit Buttons */
+
+.custom-button {
+  background-color: #414385;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.custom-button:hover {
+  background: #38396a;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+
+}
+
+.custom-button2 {
+  background-color: #ba4343;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.custom-button2:hover {
+  background-color: #a72b34;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.delete-button {
+  margin-top: 5px;
+  background-color: #ad4e4e;
+  color: #fff;
+  padding: 10px 24px;
+  cursor: pointer;
+  border: 1px solid #ad4e4e;
+  border-radius: 20px; /* Add rounded corners */
+  text-transform: uppercase; /* Make text uppercase */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Hover effect for the delete button */
+.delete-button:hover {
+  background-color: #a33c3c; /* Darker red on hover */
+}
+
+
+/* Editing Buttons CSS */
+
+.action-buttons {
+  text-align: center; /* Optional: Center the links horizontally */
+}
+
+.button {
+  display: inline-block;
+  margin: 5px; /* Add spacing between the links */
+}
+
+ #notice {
+    text-align: center;
+    color: green; /* Change the color to red */
+ }
+ 
+ .green-task-button {
+  background-color: #414385; 
+  color: white; 
+  padding: 10px 20px; 
+  text-decoration: none; 
+  display: inline-block; 
+  border-radius: 5px; 
+  margin-top: 30px;
+}
+
+/* Hover effect for the delete button */
+.green-task-button:hover {
+  background-color: #5a5dcb;
+}
+
+
+.blue-show-button, .blue-edit-button {
+  margin-top: 5px;
+  background-color: #507F91;
+  color: #fff;
+  padding: 10px 24px;
+  cursor: pointer;
+  border: 1px solid #507F91;
+  border-radius: 20px; /* Add rounded corners */
+  text-transform: uppercase; /* Make text uppercase */
+  font-weight: bold;
+  text-decoration: none;
+  display:block;
+}
+.blue-edit-button:hover {
+  background-color: #5aa6e4;
+  border: 1px solid #5aa6e4;
+}
+
+.blue-show-button:hover {
+  background-color: #5aa6e4; 
+  border: 1px solid #5aa6e4;
+}
+
+.heading {
+  font-family: 'Arial', cursive;
+  font-size: 2rem;
+  opacity: 0; 
+  animation: text-animation 2s ease-in-out forwards; 
+}
+
+@keyframes text-animation {
+  0% {
+    opacity: 0;
+    transform: scale(1); 
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+
+
