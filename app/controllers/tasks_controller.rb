@@ -15,7 +15,7 @@ class TasksController < ApplicationController
   #----------------------------------------------------------------------------- 
   
     @search = DuedateSearch.new(params[:search])
-    @tasks = @search.scope
+    @duedate = @search.scope
     #query by due date ^
     
   end
