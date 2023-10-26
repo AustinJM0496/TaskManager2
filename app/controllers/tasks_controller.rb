@@ -14,8 +14,7 @@ class TasksController < ApplicationController
     #@products = Product.order("#{@sort_column} #{@sort_direction}")
   #----------------------------------------------------------------------------- 
   
-    @search = DuedateSearch.new(params[:search])
-    @duedate = @search.scope
+
     #query by due date ^
     
   end
