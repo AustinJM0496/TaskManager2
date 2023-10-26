@@ -260,7 +260,7 @@ th {
 
 .form-container {
   margin: 20px 0; /* Adjust the margin as needed */
-  background: hsl(218deg 50% 91%);
+  background: hsl(218deg, 50%, 91%);
   padding: 4em;
 
 }
@@ -391,3 +391,5 @@ th {
     text-align: center;
     color: green; /* Change the color to red */
  }
+
+
